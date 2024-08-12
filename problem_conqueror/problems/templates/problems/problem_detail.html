@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ problem.title }} - Problem Conqueror</title>
+</head>
+<body>
+    <h1>{{ problem.title }}</h1>
+    <p>{{ problem.description }}</p>
+    <h3>Subproblems:</h3>
+    {% if sub_problems %}
+        <ul>
+            {% for sub_problem in sub_problems %}
+                <li>{{ sub_problem.title }} - {% if sub_problem.is_solved %}Solved{% else %}Unsolved{% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No subproblems found.</p>
+    {% endif %}
+    <a href="{% url 'problem_list' %}">Back to Problem List</a>
+</body>
+</html>

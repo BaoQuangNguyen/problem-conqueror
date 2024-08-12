@@ -1,0 +1,22 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+*.log
+
+# Environment and Virtual Environment
+.env
+.venv/
+
+# IDEs/Editors
+.vscode/
+.idea/
+
+# PostgreSQL
+postgres/
